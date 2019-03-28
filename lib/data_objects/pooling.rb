@@ -146,7 +146,7 @@ module DataObjects
       attr_reader :used
 
       def initialize(max_size, resource, args)
-        raise ArgumentError.new("+max_size+ should be a Fixnum but was #{max_size.inspect}") unless Fixnum === max_size
+        raise ArgumentError.new("+max_size+ should be a Integer but was #{max_size.inspect}") unless Integer === max_size
         raise ArgumentError.new("+resource+ should be a Class but was #{resource.inspect}") unless Class === resource
 
         @max_size = max_size
